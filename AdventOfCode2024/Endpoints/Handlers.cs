@@ -6,7 +6,7 @@ public static class Handlers
     {
         var html = @"<html>
             <head>
-                <link rel='stylesheet' type='text/css' href='/style.css'>
+                <link rel='stylesheet' type='text/css' href='/styles.css'>
             </head>
             <body>
                 <h1>Advent of Code 2024</h1>";
@@ -26,7 +26,7 @@ public static class Handlers
 $$"""
  <html>
     <head>
-        <link rel='stylesheet' type='text/css' href='/style.css'>
+        <link rel='stylesheet' type='text/css' href='/styles.css'>
     </head>
     <body>
         <form method='post' action='/input'>
@@ -57,7 +57,7 @@ $$"""
 $$"""
 <html>
     <head>
-        <link rel='stylesheet' type='text/css' href='/style.css'>
+        <link rel='stylesheet' type='text/css' href='/styles.css'>
     </head>
     <body>
         <p>Part 1: {{partOne}}</p>
