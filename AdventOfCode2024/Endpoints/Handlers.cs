@@ -103,6 +103,7 @@ public static class Handlers
                 (2015, 1) => Solution2015.Day1(input),
                 (2015, 2) => Solution2015.Day2(input),
                 (2015, 3) => Solution2015.Day3(input),
+                (2015, 4) => Solution2015.Day4(input),
                 (2024, 1) => Solution2024.Day1(input),
                 (2024, 2) => Solution2024.Day2(input),
                 _ => (0, 0)

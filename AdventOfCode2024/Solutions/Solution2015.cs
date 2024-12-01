@@ -1,4 +1,6 @@
 ﻿using Microsoft.Extensions.Primitives;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace AdventOfCode.Solutions;
 
@@ -123,5 +125,36 @@ public static class Solution2015
         var partTwo = field2.Cast<int>().Count(x => x > 0);
 
         return (partOne, partTwo);
+    }
+
+    public static (int, int) Day4(StringValues input)
+    {
+        var value = input.FirstOrDefault();
+
+        var partOne = new List<int>();
+        var counter = 0;
+        while (true)
+        {
+            byte[] hashBytes = MD5.HashData(Encoding.UTF8.GetBytes(value + counter));
+
+            StringBuilder sb = new();
+            foreach (byte b in hashBytes)
+            {
+                sb.Append(b.ToString("x2"));
+            }
+            
+            var hash = sb.ToString();
+            if (hash.StartsWith("00000"))
+            {
+                partOne.Add(counter);
+            }
+            if (sb.ToString().StartsWith("000000"))
+            {
+                break;
+            }
+            counter++;
+        }
+
+        return (partOne.First(), counter);
     }
 }
