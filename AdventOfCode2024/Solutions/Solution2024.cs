@@ -1,8 +1,8 @@
 ﻿using Microsoft.Extensions.Primitives;
 
-namespace AdventOfCode2024;
+namespace AdventOfCode.Solutions;
 
-public static class Executor
+public static class Solution2024
 {
     public static (int, int) Day1(StringValues input)
     {
