@@ -1,7 +1,10 @@
-using AdventOfCode2024;
+using AdventOfCode2024.Endpoints;
 
 var builder = WebApplication.CreateBuilder(args);
+
 var app = builder.Build();
+
+app.MapEndpoints();
 app.UseStaticFiles();
-app.MapEndpoint();
-app.Run();
+
+await app.RunAsync();

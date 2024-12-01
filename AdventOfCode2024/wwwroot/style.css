@@ -1,0 +1,38 @@
+﻿body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #0f0f23;
+    color: #88c0d0;
+    text-align: center;
+}
+
+form {
+    margin-top: 50px;
+}
+
+input, button {
+    font-size: 16px;
+    padding: 5px;
+}
+
+button {
+    background-color: #2e3440;
+    color: #88c0d0;
+    border: 1px solid #88c0d0;
+    border-radius: 4px;
+}
+
+    button:hover {
+        background-color: #4c566a;
+        border-color: #81a1c1;
+    }
+
+a {
+    display: inline-block;
+    margin-top: 5px;
+    color: #88c0d0;
+    text-decoration: none;
+}
+
+    a:hover {
+        color: #fbff64;
+    }
