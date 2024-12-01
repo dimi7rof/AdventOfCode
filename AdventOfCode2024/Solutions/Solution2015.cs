@@ -6,7 +6,33 @@ public static class Solution2015
 {
     public static (int, int) Day1(StringValues input)
     {
-        return (0, 0);
+        var value = input
+            .First()!
+            .Split(Environment.NewLine)
+            .First();
+
+        var partOne = value.Count(x => x == '(') - value.Count(x => x == ')');
+
+        var partTwo = 0;
+        var floor = 0;
+        for (var i = 1; i <= value.Length; i++)
+        {
+            if (value[i] == '(')
+            {
+                floor++;
+            }
+            else
+            {
+                floor--;
+            }
+            if (floor == -1)
+            {
+                partTwo = i;
+                break;
+            }
+        }
+
+        return (partOne, partTwo);
     }
 
     public static (int, int) Day2(StringValues input)
@@ -40,7 +66,5 @@ public static class Solution2015
             .Sum();
 
         return (partOne, partTwo);
-        //1588178
-        //3783758
     }
 }

@@ -29,8 +29,6 @@ public static class Solution2024
             .Sum();
 
         return (partOne, partTwo);
-        //3246517
-        //29379307
     }
 
     public static (int, int) Day2(StringValues input)
