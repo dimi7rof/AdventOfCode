@@ -131,30 +131,25 @@ public static class Solution2015
     {
         var value = input.FirstOrDefault();
 
-        var partOne = new List<int>();
+        int partOne = 0;
         var counter = 0;
         while (true)
         {
-            byte[] hashBytes = MD5.HashData(Encoding.UTF8.GetBytes(value + counter));
+            var hashBytes = MD5.HashData(Encoding.UTF8.GetBytes(value + counter));
 
-            StringBuilder sb = new();
-            foreach (byte b in hashBytes)
-            {
-                sb.Append(b.ToString("x2"));
-            }
-            
-            var hash = sb.ToString();
+            var hash = string.Concat(hashBytes.Select(b => b.ToString("x2")));
+
             if (hash.StartsWith("00000"))
             {
-                partOne.Add(counter);
+                partOne = partOne == 0 ? counter : partOne;
             }
-            if (sb.ToString().StartsWith("000000"))
+            if (hash.StartsWith("000000"))
             {
                 break;
             }
             counter++;
         }
 
-        return (partOne.First(), counter);
+        return (partOne, counter);
     }
 }
