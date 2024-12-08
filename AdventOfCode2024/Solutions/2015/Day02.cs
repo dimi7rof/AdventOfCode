@@ -2,7 +2,7 @@
 
 namespace AdventOfCode.Solutions;
 
-public static partial class Solution2015
+public static partial class Solutions2015
 {
     public static (int, int) Day2(StringValues input)
     {

@@ -1,6 +1,7 @@
 ﻿using AdventOfCode.Samples;
-using AdventOfCode.Solutions;
 using Microsoft.Extensions.Primitives;
+using S2015 = AdventOfCode.Solutions.Solutions2015;
+using S2024 = AdventOfCode.Solutions.Solutions2024;
 
 namespace AdventOfCode;
 
@@ -52,35 +53,22 @@ public static class Executor
     private static (long, long) ExecuteSolution(int year, int day, string input)
         => (year, day) switch
         {
-            (2015, 1) => Solution2015.Day1(input),
-            (2015, 2) => Solution2015.Day2(input),
-            (2015, 3) => Solution2015.Day3(input),
-            (2015, 4) => Solution2015.Day4(input),
-            (2024, 1) => Solution2024.Day1(input),
-            (2024, 2) => Solution2024.Day2(input),
-            (2024, 3) => Solution2024.Day3(input),
-            (2024, 4) => Solution2024.Day4(input),
-            (2024, 5) => Solution2024.Day5(input),
-            (2024, 6) => Solution2024.Day6(input),
-            (2024, 7) => Solution2024.Day7(input),
-            (2024, 8) => Solution2024.Day8(input),
-            (2024, 9) => Solution2024.Day9(input),
-            (2024, 10) => Solution2024.Day10(input),
-            (2024, 11) => Solution2024.Day11(input),
-            (2024, 12) => Solution2024.Day12(input),
-            (2024, 13) => Solution2024.Day13(input),
-            (2024, 14) => Solution2024.Day14(input),
-            (2024, 15) => Solution2024.Day15(input),
-            (2024, 16) => Solution2024.Day16(input),
-            (2024, 17) => Solution2024.Day17(input),
-            (2024, 18) => Solution2024.Day18(input),
-            (2024, 19) => Solution2024.Day19(input),
-            (2024, 20) => Solution2024.Day20(input),
-            (2024, 21) => Solution2024.Day21(input),
-            (2024, 22) => Solution2024.Day22(input),
-            (2024, 23) => Solution2024.Day23(input),
-            (2024, 24) => Solution2024.Day24(input),
-            (2024, 25) => Solution2024.Day25(input),
+            (2015, 1) => S2015.Day1(input),
+            (2015, 2) => S2015.Day2(input),
+            (2015, 3) => S2015.Day3(input),
+            (2015, 4) => S2015.Day4(input),
+            (2024, 1) => S2024.Day1(input),
+            (2024, 2) => S2024.Day2(input),
+            (2024, 3) => S2024.Day3(input),
+            (2024, 4) => S2024.Day4(input),
+            (2024, 5) => S2024.Day5(input),
+            (2024, 6) => S2024.Day6(input),
+            (2024, 7) => S2024.Day7(input),
+            (2024, 8) => S2024.Day8(input),
+            (2024, 9) => S2024.Day9(input),
+            (2024, 10) => S2024.Day10(input),
+            (2024, 11) => S2024.Day11(input),
+            (2024, 12) => S2024.Day12(input),
             _ => (0, 0)
         };
 }

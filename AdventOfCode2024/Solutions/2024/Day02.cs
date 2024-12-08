@@ -1,4 +1,4 @@
-﻿namespace AdventOfCode.Solutions2024;
+﻿namespace AdventOfCode.Solutions;
 
 public static partial class Solutions2024
 {

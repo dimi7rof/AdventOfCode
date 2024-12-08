@@ -1,6 +1,6 @@
 ﻿namespace AdventOfCode.Solutions;
 
-public static partial class Solution2024
+public static partial class Solutions2024
 {
     public static (int, int) Day1(string input)
     {
