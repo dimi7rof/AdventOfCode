@@ -1,7 +1,7 @@
 ﻿body {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Source Code Pro", monospace;
     background-color: #0f0f23;
-    color: #88c0d0;
+    color: #009900;
     text-align: center;
 }
 
@@ -15,24 +15,23 @@ input, button {
 }
 
 button {
-    background-color: #2e3440;
-    color: #88c0d0;
-    border: 1px solid #88c0d0;
-    border-radius: 4px;
+    background-color: #0f0f23;
+    color: #009900;
 }
 
     button:hover {
-        background-color: #4c566a;
-        border-color: #81a1c1;
+        background-color: #0f0f23;
+        color: #00cf00;
     }
 
 a {
     display: inline-block;
     margin-top: 5px;
-    color: #88c0d0;
+    color: #009900;
     text-decoration: none;
+    font-size: 14pt;
 }
 
     a:hover {
-        color: #fbff64;
+        color: #00cf00;
     }

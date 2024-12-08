@@ -1,4 +1,4 @@
-﻿using AdventOfCode.Solutions;
+﻿using AdventOfCode;
 
 namespace AdventOfCode2024.Endpoints;
 
@@ -13,9 +13,9 @@ public static class Handlers
             <body>
                 <h1>Advent of Code</h1>";
 
-        for (int year = 2015; year <= 2024; year++)
+        for (int year = DateTime.Today.Year; year >= 2015; year--)
         {
-            html += $"<a href='/year?year={year}'><button>{year}</button></a><br>";
+            html += $"<a href='/year?year={year}'>[{year}]</a><br>";
         }
 
         html += "</body></html>";
@@ -46,7 +46,7 @@ public static class Handlers
 
         for (int day = 1; day <= 25; day++)
         {
-            html += $"<a href='/day?year={year}&day={day}'>Day {day}</a><br>";
+            html += $"<a href='/day?year={year}&day={day}'>   {day}   </a><br>";
         }
 
         html += "<br><a href='/'>Back</a></body></html>";
@@ -98,16 +98,7 @@ public static class Handlers
 
         try
         {
-            var (partOne, partTwo) = (year, day) switch
-            {
-                (2015, 1) => Solution2015.Day1(input),
-                (2015, 2) => Solution2015.Day2(input),
-                (2015, 3) => Solution2015.Day3(input),
-                (2015, 4) => Solution2015.Day4(input),
-                (2024, 1) => Solution2024.Day1(input),
-                (2024, 2) => Solution2024.Day2(input),
-                _ => (0, 0)
-            };
+            var (part1, part2) = Executor.ExecuteSolution(year, day, input);
 
             var html = $$"""
             <html>
@@ -115,11 +106,11 @@ public static class Handlers
                     <link rel='stylesheet' type='text/css' href='/styles.css'>
                 </head>
                 <body>
-                    <h1>Results</h1>
-                    <p>Part 1: {{partOne}}</p>
-                    <p>Part 2: {{partTwo}}</p>
+                    <h1>Result:</h1>
+                    <p>Part 1: {{part1}}</p>
+                    <p>Part 2: {{part2}}</p>
                     <br>
-                    <a href='/year?year={{year}}'>Back</a>
+                    <a href='/day?year={{year}}&day={{day}}'>Back</a>
                     <br>
                     <a href='/'>Home</a>
                 </body>
@@ -131,7 +122,21 @@ public static class Handlers
         catch (Exception ex)
         {
             context.Response.StatusCode = 500;
-            await context.Response.WriteAsync($"Error: {ex.Message}");
+            await context.Response.WriteAsync($$"""
+            <html>
+                <head>
+                    <link rel='stylesheet' type='text/css' href='/styles.css'>
+                </head>
+                <body>
+                    <h1>ERROR</h1>
+                    <p>{{ex}}</p>
+                    <br>
+                    <a href='/day?year={{year}}&day={{day}}'>Back</a>
+                    <br>
+                    <a href='/'>Home</a>
+                </body>
+            </html>
+            """);
             return;
         }
     }
