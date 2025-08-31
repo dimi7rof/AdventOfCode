@@ -1,6 +1,6 @@
-﻿using static AdventOfCode2024.Endpoints.Handlers;
+﻿using static AdventOfCodeWeb.Endpoints.Handlers;
 
-namespace AdventOfCode2024.Endpoints;
+namespace AdventOfCodeWeb.Endpoints;
 
 public static class RegisterEndpoints
 {

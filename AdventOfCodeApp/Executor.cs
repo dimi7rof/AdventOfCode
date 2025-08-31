@@ -1,9 +1,9 @@
-﻿using AdventOfCode.Samples;
+﻿using AdventOfCodeWeb.Samples;
 using Microsoft.Extensions.Primitives;
 using S2015 = AdventOfCode.Solutions.Solutions2015;
 using S2024 = AdventOfCode.Solutions.Solutions2024;
 
-namespace AdventOfCode;
+namespace AdventOfCodeWeb;
 
 public static class Executor
 {

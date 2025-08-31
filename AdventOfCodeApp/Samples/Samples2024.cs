@@ -1,4 +1,4 @@
-﻿namespace AdventOfCode.Samples;
+﻿namespace AdventOfCodeWeb.Samples;
 
 public static class Samples2024
 {
