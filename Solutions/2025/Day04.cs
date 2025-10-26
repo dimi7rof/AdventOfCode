@@ -1,6 +1,6 @@
-﻿namespace AdventOfCode.Solutions2025;
+namespace AdventOfCode.Solutions2025;
 
-public static class Day01
+public static class Day04
 {
     private readonly static string _sample = """
         
@@ -8,8 +8,8 @@ public static class Day01
 
     public static ((int Part1, int Part2) Sample, (int Part1, int Part2) Input) Solve()
     {
-        var splitSample = _sample.SplitByLine();
-        var input = File.ReadAllLines(GetInputFilePath("01"));
+        var splitSample = _sample.Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);
+        var input = File.ReadAllLines(GetInputFilePath("04"));
 
         return ((Part1(splitSample), Part2(splitSample)), (Part1(input), Part2(input)));
     }

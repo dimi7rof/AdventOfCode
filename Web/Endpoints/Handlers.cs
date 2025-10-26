@@ -1,6 +1,4 @@
-﻿using AdventOfCodeWeb;
-
-namespace AdventOfCodeWeb.Endpoints;
+﻿namespace AdventOfCodeWeb.Endpoints;
 
 public static class Handlers
 {
