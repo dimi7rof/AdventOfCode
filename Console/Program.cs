@@ -3,7 +3,7 @@ using System.Diagnostics;
 
 var start = Stopwatch.GetTimestamp();
 
-var day =  DateTime.Now.Day;
+var day = DateTime.Now.Day;
 var (sample, result) = day switch
 {
     1 => Day01.Solve(),

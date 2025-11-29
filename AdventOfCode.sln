@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdventOfCodeWeb", "Web\Adve
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Solutions", "Solutions\Solutions.csproj", "{FC85E6AF-518E-466B-8431-3C6B0DE2A1D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console", "Console\Console.csproj", "{07AB06D0-D605-4679-A1A6-5DFD0693BE22}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console25", "Console\Console25.csproj", "{07AB06D0-D605-4679-A1A6-5DFD0693BE22}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
 	ProjectSection(SolutionItems) = preProject
