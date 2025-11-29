@@ -1,4 +1,7 @@
 ﻿using AdventOfCode.Solutions2025;
+using System.Diagnostics;
+
+var start = Stopwatch.GetTimestamp();
 
 var day =  DateTime.Now.Day;
 var (sample, result) = day switch
@@ -35,3 +38,7 @@ Console.WriteLine($"Sample: Part 1: {sample.Part1}");
 Console.WriteLine($"Sample: Part 2: {sample.Part2}");
 Console.WriteLine($"Result: Part 1: {result.Part1}");
 Console.WriteLine($"Result: Part 2: {result.Part2}");
+
+var end = Stopwatch.GetTimestamp();
+var elapsedMs = (end - start) / (double)Stopwatch.Frequency;
+Console.WriteLine($"Elapsed time: {elapsedMs:F2} s");
